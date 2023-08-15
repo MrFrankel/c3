@@ -11,9 +11,7 @@
       // When bundling esm output. Beware of changing this line.
       // TODO: Maybe we should check that the modification by rollup-plugin-modify
       // is valid during unit tests.
-      $$.d3 = window.d3
-          ? window.d3
-          : typeof require !== 'undefined'
+      $$.d3 = typeof require !== 'undefined'
               ? require('d3')
               : undefined;
       $$.api = api;
